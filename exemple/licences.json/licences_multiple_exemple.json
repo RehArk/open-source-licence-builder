@@ -1,0 +1,33 @@
+{
+  "licences": [
+    {
+      "licence": "MIT",
+      "params": {
+        "copyright_author" : "RehArk",
+        "year" : 2023
+      },
+      "file": {
+        "includes": [
+          "src"
+        ],
+        "excludes": [
+          "src\\templates",
+          "src\\FileProvider.js"
+        ]
+      }
+    },
+    {
+      "licence": "MIT",
+      "params": {
+        "copyright_author" : "RehArk",
+        "year" : 2023
+      },
+      "file": {
+        "includes": [
+          "src\\FileProvider.js"
+        ],
+        "excludes": []
+      }
+    }
+  ]
+}

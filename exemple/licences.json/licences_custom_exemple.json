@@ -1,0 +1,21 @@
+{
+  "licences": [
+    {
+      "licence": "Proprietary License",
+      "params": {
+        "copyright_author": "Proprietary License Owner",
+        "year": 2023
+      },
+      "file": {
+        "includes": [
+          "src"
+        ],
+        "excludes": [
+          "src\\templates"
+        ]
+      },
+      "custom_file_template": "{{licence}} -- by {{copyright_author}} in {{year}}",
+      "custom_licence_template": "{{licence}} -- by {{copyright_author}} in {{year}} \nAll right reserved."
+    }
+  ]
+}

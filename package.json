@@ -1,0 +1,13 @@
+{
+  "name": "open-source-licence-builder",
+  "version": "0.0.1",
+  "description": "A small tool to auto-build licence and make more clear what is open-source",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-licence": "node src/main.js"
+  },
+  "author": "RehArk",
+  "license": "MIT",
+  "keywords": []
+}
