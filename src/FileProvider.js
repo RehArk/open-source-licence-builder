@@ -1,5 +1,6 @@
 // ----- LICENCE
-// ----- This file is on MIT licence.
+// ----- This file is on MIT licence. Copyright (c) 2023-present RehArk.
+// ----- for more details, please check {@link : https://github.com/RehArk/open-source-builder/blob/main/licences.md#1f7f3375-0c88-4118-a2f9-5e112a966761}
 // ----- LICENCE
 
 const fs = require('fs');

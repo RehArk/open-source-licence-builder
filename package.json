@@ -9,5 +9,9 @@
   },
   "author": "RehArk",
   "license": "MIT",
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "gitconfiglocal": "^2.1.0",
+    "uuid": "^9.0.1"
+  }
 }

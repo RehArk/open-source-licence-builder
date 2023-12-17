@@ -1,5 +1,6 @@
 // ----- LICENCE
-// ----- This file is on MIT licence.
+// ----- This file is on MIT licence. Copyright (c) 2023-present RehArk.
+// ----- for more details, please check {@link : https://github.com/RehArk/open-source-builder/blob/main/licences.md#1f7f3375-0c88-4118-a2f9-5e112a966761}
 // ----- LICENCE
 
 const fs = require('fs');
@@ -8,10 +9,10 @@ const TemplateBuilder = require('./TemplateBuilder');
 
 class TemplateManager {
 
-    constructor() {
-        this.templateBuilder = new TemplateBuilder();
+    constructor(git_url) {
+        this.templateBuilder = new TemplateBuilder(git_url);
         this.pattern = '// ----- LICENCE';
-        this.licence_md = "licence.md";
+        this.licences_md = "licences.md";
         this.format = "utf8"
     }
 
@@ -21,7 +22,7 @@ class TemplateManager {
      * method : rebuildLicenceFile
      * 
      * description :
-     * clear licence.md file to rebuild all licences
+     * clear licences.md file to rebuild all licences
      * 
      */
     rebuildLicenceFile(licenceHeader) {
@@ -36,7 +37,7 @@ class TemplateManager {
             licenceHeader + "\n"
         ;
 
-        fs.writeFile(this.licence_md, licenceHeader, this.format, (writeErr) => {
+        fs.writeFile(this.licences_md, licenceHeader, this.format, (writeErr) => {
 
             if (writeErr) {
                 console.log("Can't edit file : " + writeErr);
@@ -51,15 +52,13 @@ class TemplateManager {
      * method : addLicence
      * 
      * description :
-     * add formated template licence in licence.md
+     * add formated template licence in licences.md
      * 
      * @param {*} licence 
      */
     addLicence(licence) {
         const template_result = this.templateBuilder.buildLicence(licence);
-        this.writeInFile(this.licence_md, template_result)
-
-        
+        this.writeInFile(this.licences_md, template_result)
     }
 
     /**

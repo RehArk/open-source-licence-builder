@@ -1,4 +1,4 @@
-MIT License
+<a href="./src/what_is_this/{{licence_name}}.md" id="{{licence_uuid}}">{{licence_name}} licence</a>
 
 Copyright {{year}} {{copyright_author}}
 

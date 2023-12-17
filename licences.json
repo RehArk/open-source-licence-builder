@@ -4,14 +4,15 @@
       "licence": "MIT",
       "params": {
         "copyright_author" : "RehArk",
-        "year" : 2023
+        "year" : "2023-present"
       },
       "file": {
         "includes": [
           "src"
         ],
         "excludes": [
-          "src\\templates"
+          "src\\templates",
+          "src\\what_is_this"
         ]
       }
     }
