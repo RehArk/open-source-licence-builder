@@ -15,8 +15,8 @@ licence.json
       "licence": "licence",
       "params": {
         "copyright_author": "Proprietary License Owner",
-        "year": "year,
-        "custom_optional_param": "param
+        "year": "year",
+        "custom_optional_param": "param"
       },
       "file": {
         "includes": [
