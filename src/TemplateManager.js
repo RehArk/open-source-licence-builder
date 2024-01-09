@@ -126,8 +126,8 @@ class TemplateManager {
         const line = this.templateBuilder.buildLinesForBeginning(licence);
 
         for(let path of includes) {
-            this.removeOldFileTemplate(path, () => {
-                this.addNewFileTemplate(path, line)
+            this.removeOldFileTemplate(path, (backline) => {
+                this.addNewFileTemplate(path, line, backline)
             });
         }
 
@@ -143,7 +143,7 @@ class TemplateManager {
      * @param {*} newLine 
      * @param {*} callback 
      */
-    addNewFileTemplate(filePath, newLine, callback = () => {}) {
+    addNewFileTemplate(filePath, newLine, add_backline, callback = () => {}) {
 
         fs.readFile(filePath, this.format, (err, data) => {
 
@@ -151,7 +151,12 @@ class TemplateManager {
                 console.log("Can't read file : " + filePath)
             }
             
-            const newData = newLine + data;
+            if(add_backline) {
+                data = "\n" + data;
+            }
+
+            let newData = newLine + data;
+
         
             fs.writeFile(filePath, newData, this.format, (writeErr) => {
 
@@ -191,13 +196,13 @@ class TemplateManager {
 
             console.log(startIndex, endIndex)
 
-            if(startIndex !== 0) {
-                return callback();;
-            }
-                      
             if (startIndex === -1 || endIndex === -1) {
-                return callback();;
+                return callback(true);;
             }
+
+            if(startIndex !== 0) {
+                return callback(false);;
+            }    
 
             const newData = data.slice(0, startIndex) + data.slice(endIndex + this.pattern.length);
         
@@ -208,7 +213,7 @@ class TemplateManager {
                     return;
                 }
 
-                callback();
+                callback(false);
 
             });
 

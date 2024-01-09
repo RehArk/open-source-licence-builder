@@ -15,8 +15,8 @@ licence.json
       "licence": "licence",
       "params": {
         "copyright_author": "Proprietary License Owner",
-        "year": "year,
-        "custom_optional_param": "param
+        "year": "year",
+        "custom_optional_param": "param"
       },
       "file": {
         "includes": [
@@ -26,8 +26,8 @@ licence.json
           "src\\templates"
         ]
       },
-      "custom_file_template": "{{licence}} -- by {{copyright_author}} in {{year}}",
-      "custom_licence_template": "{{licence}} -- by {{copyright_author}} in {{year}} \nAll right reserved."
+      "custom_file_template": "{{licence_name}} -- by {{copyright_author}} in {{year}}",
+      "custom_licence_template": "{{licence_name}} -- by {{copyright_author}} in {{year}} \nAll right reserved."
     }
   ]
 }
